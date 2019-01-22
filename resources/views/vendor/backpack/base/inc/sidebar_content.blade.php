@@ -10,3 +10,5 @@
         <li><a href="{{ backpack_url('permission') }}"><i class="fa fa-key"></i> <span>Permissions</span></a></li>
     </ul>
 </li>
+
+<li><a href='{{ backpack_url('import') }}'><i class='fa fa-tag'></i> <span>Import</span></a></li>
