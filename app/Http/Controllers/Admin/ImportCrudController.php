@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Imports\UsersImport;
+use App\User;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 
 // VALIDATION: change the requests to match your own file names if you need form validation
 use App\Http\Requests\ImportRequest as StoreRequest;
 use App\Http\Requests\ImportRequest as UpdateRequest;
 use Backpack\CRUD\CrudPanel;
+use Maatwebsite\Excel\Facades\Excel;
 
 /**
  * Class ImportCrudController
@@ -36,7 +39,7 @@ class ImportCrudController extends CrudController
         // TODO: remove setFromDb() and manually define Fields and Columns
         $this->crud->setFromDb();
 
-        $this->crud->addField(['name' => 'file', 'type' => 'browse', 'label' => 'Add cvs file']);
+        $this->crud->addField(['name' => 'file', 'type' => 'upload', 'label' => 'Add cvs file', 'upload' => true]);
 
         // add asterisk for fields that are required in ImportRequest
         $this->crud->setRequiredFields(StoreRequest::class, 'create');
@@ -49,6 +52,10 @@ class ImportCrudController extends CrudController
         $redirect_location = parent::storeCrud($request);
         // your additional operations after save here
         // use $this->data['entry'] or $this->crud->entry
+
+        // import file data to users table
+        Excel::import(new UsersImport, $request->file('file'));
+
         return $redirect_location;
     }
 
