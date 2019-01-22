@@ -36,6 +36,8 @@ class ImportCrudController extends CrudController
         // TODO: remove setFromDb() and manually define Fields and Columns
         $this->crud->setFromDb();
 
+        $this->crud->addField(['name' => 'file', 'type' => 'browse', 'label' => 'Add cvs file']);
+
         // add asterisk for fields that are required in ImportRequest
         $this->crud->setRequiredFields(StoreRequest::class, 'create');
         $this->crud->setRequiredFields(UpdateRequest::class, 'edit');
