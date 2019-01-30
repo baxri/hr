@@ -2,23 +2,19 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Imports\EmployeeImport;
-use App\Imports\UsersImport;
-use App\User;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 
 // VALIDATION: change the requests to match your own file names if you need form validation
-use App\Http\Requests\ImportRequest as StoreRequest;
-use App\Http\Requests\ImportRequest as UpdateRequest;
+use App\Http\Requests\EmployeeRequest as StoreRequest;
+use App\Http\Requests\EmployeeRequest as UpdateRequest;
 use Backpack\CRUD\CrudPanel;
-use Maatwebsite\Excel\Facades\Excel;
 
 /**
- * Class ImportCrudController
+ * Class EmployeeCrudController
  * @package App\Http\Controllers\Admin
  * @property-read CrudPanel $crud
  */
-class ImportCrudController extends CrudController
+class EmployeeCrudController extends CrudController
 {
     public function setup()
     {
@@ -27,9 +23,9 @@ class ImportCrudController extends CrudController
         | CrudPanel Basic Information
         |--------------------------------------------------------------------------
         */
-        $this->crud->setModel('App\Models\Import');
-        $this->crud->setRoute(config('backpack.base.route_prefix') . '/import');
-        $this->crud->setEntityNameStrings('import', 'imports');
+        $this->crud->setModel('App\Models\Employee');
+        $this->crud->setRoute(config('backpack.base.route_prefix') . '/employee');
+        $this->crud->setEntityNameStrings('employee', 'employees');
 
         /*
         |--------------------------------------------------------------------------
@@ -40,9 +36,7 @@ class ImportCrudController extends CrudController
         // TODO: remove setFromDb() and manually define Fields and Columns
         $this->crud->setFromDb();
 
-        $this->crud->addField(['name' => 'file', 'type' => 'upload', 'label' => 'Add cvs file', 'upload' => true]);
-
-        // add asterisk for fields that are required in ImportRequest
+        // add asterisk for fields that are required in EmployeeRequest
         $this->crud->setRequiredFields(StoreRequest::class, 'create');
         $this->crud->setRequiredFields(UpdateRequest::class, 'edit');
     }
@@ -53,10 +47,6 @@ class ImportCrudController extends CrudController
         $redirect_location = parent::storeCrud($request);
         // your additional operations after save here
         // use $this->data['entry'] or $this->crud->entry
-
-        // import file data to Employees table
-        Excel::import(new EmployeeImport(), $request->file('file'));
-
         return $redirect_location;
     }
 

@@ -35,6 +35,14 @@ class DatabaseSeeder extends Seeder
             'updated_at' => \Carbon\Carbon::now(),
         ]);
 
+//        DB::table('roles')->insert([
+//            'id' => 3,
+//            'name' => 'EMPLOYEES',
+//            'guard_name' => 'web',
+//            'created_at' => \Carbon\Carbon::now(),
+//            'updated_at' => \Carbon\Carbon::now(),
+//        ]);
+
         DB::table('model_has_roles')->insert([
             'role_id' => 1,
             'model_type' => 'App\Models\BackpackUser',

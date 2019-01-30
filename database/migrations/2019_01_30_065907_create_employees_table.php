@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateImportsTable extends Migration
+class CreateEmployeesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateImportsTable extends Migration
      */
     public function up()
     {
-        Schema::create('imports', function (Blueprint $table) {
+        Schema::create('employees', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->default(1);
-            $table->string('name')->default('Import from csv file');
-            $table->string('file');
+            $table->string('name');
+            $table->string('email')->unique();
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateImportsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('imports');
+        Schema::dropIfExists('employees');
     }
 }
