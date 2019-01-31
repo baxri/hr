@@ -9,8 +9,6 @@ class EmployeeImport implements ToModel
 {
     public function model(array $row)
     {
-        dd($row);
-
         return new Employee([
             'name' => $row[0],
             'email' => $row[1],

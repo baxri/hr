@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Imports\EmployeeImport;
+use App\Imports\StoreImport;
 use App\Imports\UsersImport;
 use App\User;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
@@ -29,7 +30,7 @@ class ImportCrudController extends CrudController
         */
         $this->crud->setModel('App\Models\Import');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/import');
-        $this->crud->setEntityNameStrings('import', 'imports');
+        $this->crud->setEntityNameStrings('import Stores', 'Import Stores');
 
         /*
         |--------------------------------------------------------------------------
@@ -55,7 +56,8 @@ class ImportCrudController extends CrudController
         // use $this->data['entry'] or $this->crud->entry
 
         // import file data to Employees table
-        Excel::import(new EmployeeImport(), $request->file('file'));
+//        Excel::import(new EmployeeImport(), $request->file('file'));
+        Excel::import(new StoreImport(), $request->file('file'));
 
         return $redirect_location;
     }

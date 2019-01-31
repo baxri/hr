@@ -9,19 +9,8 @@ class Import extends Model
 {
     use CrudTrait;
 
-    /*
-    |--------------------------------------------------------------------------
-    | GLOBAL VARIABLES
-    |--------------------------------------------------------------------------
-    */
-
     protected $table = 'imports';
-    // protected $primaryKey = 'id';
-    // public $timestamps = false;
-    // protected $guarded = ['id'];
-    protected $fillable = ['name', 'file'];
-    // protected $hidden = [];
-    // protected $dates = [];
+    protected $guarded = [];
 
     public function setFileAttribute($value)
     {

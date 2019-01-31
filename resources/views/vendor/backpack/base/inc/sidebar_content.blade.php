@@ -10,7 +10,7 @@
         <li><a href="{{ backpack_url('permission') }}"><i class="fa fa-key"></i> <span>Permissions</span></a></li>
     </ul>
 </li>
-<li><a href='{{ backpack_url('employee') }}'><i class='fa fa-tag'></i> <span>Employees</span></a></li>
-<li><a href='{{ backpack_url('import') }}'><i class='fa fa-tag'></i> <span>Import</span></a></li>
-
 <li><a href='{{ backpack_url('store') }}'><i class='fa fa-tag'></i> <span>Stores</span></a></li>
+<li><a href='{{ backpack_url('employee') }}'><i class='fa fa-tag'></i> <span>Employees</span></a></li>
+<li><a href='{{ backpack_url('import') }}'><i class='fa fa-tag'></i> <span>Import Stores</span></a></li>
+
