@@ -1,21 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="betlive">
-    <serverData>
-      <paths name="MMC">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="betlive">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="hr" />
-          </mappings>
-        </serverdata>
-      </paths>
-    </serverData>
-  </component>
+  <component name="PublishConfigData" serverName="nvr" />
 </project>
