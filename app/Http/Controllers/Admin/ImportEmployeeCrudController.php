@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Imports\EmployeeImport;
+use App\Models\Employee;
+use App\Models\ImportEmployee;
+use App\Models\Store;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 
 // VALIDATION: change the requests to match your own file names if you need form validation
@@ -40,6 +43,22 @@ class ImportEmployeeCrudController extends CrudController
 
         $this->crud->addField(['name' => 'file', 'type' => 'upload', 'label' => 'Add cvs file', 'upload' => true]);
 
+        $options = [];
+        $stores = Store::all()->toArray();
+
+        foreach ($stores as $store) {
+            $options[$store['id']] = $store['name'];
+        }
+
+        $this->crud->addField([ // select_from_array
+            'name' => 'store_id',
+            'label' => "Store",
+            'type' => 'select2_from_array',
+            'options' => $options,
+            'allows_null' => false,
+            'default' => 'one',
+            // 'allows_multiple' => true, // OPTIONAL; needs you to cast this to array in your model;
+        ]);
 
         // add asterisk for fields that are required in ImportEmployeeRequest
         $this->crud->setRequiredFields(StoreRequest::class, 'create');
@@ -54,7 +73,7 @@ class ImportEmployeeCrudController extends CrudController
         // use $this->data['entry'] or $this->crud->entry
 
         // import file data to Employees table
-        Excel::import(new EmployeeImport(), $request->file('file'));
+        Excel::import(new EmployeeImport($request->input('store_id')), $request->file('file'));
 
         return $redirect_location;
     }

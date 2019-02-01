@@ -10,4 +10,8 @@ class ImportEmployee extends Model
     use CrudTrait;
     protected $table = 'imports_employees';
     protected $guarded = [];
+
+    public function store(){
+        return $this->belongsTo(Store::class, 'store_id');
+    }
 }

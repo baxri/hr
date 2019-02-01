@@ -16,6 +16,7 @@ class CreateImportsEmployeesTable extends Migration
         Schema::create('imports_employees', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->default(1);
+            $table->integer('store_id')->nullable();
             $table->string('name')->default('Import employees from csv file');
             $table->string('file');
             $table->timestamps();

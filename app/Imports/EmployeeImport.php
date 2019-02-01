@@ -9,6 +9,13 @@ use Maatwebsite\Excel\Concerns\ToModel;
 
 class EmployeeImport implements ToModel
 {
+    private $store = null;
+
+    function __construct($store)
+    {
+        $this->store = $store;
+    }
+
     public function model(array $row)
     {
         if($row[0] == 'registration_number'){
@@ -36,6 +43,12 @@ class EmployeeImport implements ToModel
 
         // Remove data
         unset($columns[count($columns)-1]);
+        $columns = array_values($columns);
+
+        $data['store_id'] = $this->store;
+
+        // Remove store_id
+        unset($columns[0]);
         $columns = array_values($columns);
 
         foreach ( $columns as $key => $value ){

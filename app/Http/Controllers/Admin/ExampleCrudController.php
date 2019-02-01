@@ -43,16 +43,6 @@ class ExampleCrudController extends CrudController
             'function_name' => 'formatFileRow'
         ]);
 
-
-//        [
-//            // run a function on the CRUD model and show its return value
-//            'name' => "url",
-//            'label' => "URL", // Table column heading
-//            'type' => "model_function",
-//            'function_name' => 'getSlugWithLink', // the method in your Model
-//            // 'limit' => 100, // Limit the number of characters shown
-//        ],
-
         // add asterisk for fields that are required in ExampleRequest
         $this->crud->setRequiredFields(StoreRequest::class, 'create');
         $this->crud->setRequiredFields(UpdateRequest::class, 'edit');
