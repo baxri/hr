@@ -15,4 +15,5 @@ Route::group([
     CRUD::resource('employee', 'EmployeeCrudController');
     CRUD::resource('store', 'StoreCrudController');
     CRUD::resource('importEmployee', 'ImportEmployeeCrudController');
+    CRUD::resource('example', 'ExampleCrudController');
 }); // this should be the absolute last line of this file
