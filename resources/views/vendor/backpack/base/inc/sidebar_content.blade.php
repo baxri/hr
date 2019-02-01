@@ -10,8 +10,15 @@
         <li><a href="{{ backpack_url('permission') }}"><i class="fa fa-key"></i> <span>Permissions</span></a></li>
     </ul>
 </li>
-<li><a href='{{ backpack_url('store') }}'><i class='fa fa-tag'></i> <span>Stores</span></a></li>
-<li><a href='{{ backpack_url('employee') }}'><i class='fa fa-tag'></i> <span>Employees</span></a></li>
-<li><a href='{{ backpack_url('import') }}'><i class='fa fa-tag'></i> <span>Import Stores</span></a></li>
-<li><a href='{{ backpack_url('importEmployee') }}'><i class='fa fa-tag'></i> <span>Import Employees</span></a></li>
-<li><a href='{{ backpack_url('example') }}'><i class='fa fa-tag'></i> <span>Example Import Files</span></a></li>
+<li><a href='{{ backpack_url('store') }}'><i class='fa fa-tag'></i> <span>{{trans('app.Stores')}}</span></a></li>
+<li><a href='{{ backpack_url('employee') }}'><i class='fa fa-tag'></i> <span>{{trans('app.Employees')}}</span></a></li>
+
+<li class="treeview">
+    <a href="#"><i class="fa fa-group"></i> <span>{{trans('app.Stores, Employees import')}}</span> <i class="fa fa-angle-left pull-right"></i></a>
+    <ul class="treeview-menu">
+        <li><a href="{{ backpack_url('import') }}"><i class="fa fa-user"></i> <span>{{trans('app.Import Stores')}}</span></a></li>
+        <li><a href="{{ backpack_url('importEmployee') }}"><i class="fa fa-group"></i> <span>{{trans('app.Import Employees')}}</span></a></li>
+        <li><a href="{{ backpack_url('example') }}"><i class="fa fa-key"></i> <span>{{trans('app.Example Import Files')}}</span></a></li>
+    </ul>
+</li>
+
