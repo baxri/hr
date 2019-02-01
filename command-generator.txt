@@ -1,1 +1,1 @@
-php artisan backpack:base:add-sidebar-content "<li><a href='{{ backpack_url('examples') }}'><i class='fa fa-tag'></i> <span>Example Import Files</span></a></li>"
+php artisan backpack:base:add-custom-route "CRUD::resource('example', 'ExampleCrudController');"

@@ -10,6 +10,8 @@ class CreateExamplesTables extends Migration
     {
         Schema::create('examples_tables', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('file');
+            $table->string('name');
             $table->timestamps();
         });
     }
