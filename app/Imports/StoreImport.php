@@ -9,6 +9,10 @@ class StoreImport implements ToModel
 {
     public function model(array $row)
     {
+        if($row[0] == 'file_id'){
+            return null;
+        }
+
         $store = new Store([
             'file_id' => $row[0],
             'name' => $row[1],

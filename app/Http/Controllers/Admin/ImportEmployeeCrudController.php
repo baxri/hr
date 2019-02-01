@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Imports\EmployeeImport;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 
 // VALIDATION: change the requests to match your own file names if you need form validation
 use App\Http\Requests\ImportEmployeeRequest as StoreRequest;
 use App\Http\Requests\ImportEmployeeRequest as UpdateRequest;
 use Backpack\CRUD\CrudPanel;
+use Maatwebsite\Excel\Facades\Excel;
 
 /**
  * Class ImportEmployeeCrudController
@@ -50,6 +52,10 @@ class ImportEmployeeCrudController extends CrudController
         $redirect_location = parent::storeCrud($request);
         // your additional operations after save here
         // use $this->data['entry'] or $this->crud->entry
+
+        // import file data to Employees table
+        Excel::import(new EmployeeImport(), $request->file('file'));
+
         return $redirect_location;
     }
 
