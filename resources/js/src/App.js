@@ -15,7 +15,7 @@ class App extends Component {
             <Router>
                 <Switch>
                     <PublicRoute exact path="/login" component={Login} />
-                    <PrivateRoute path="/employees" component={EmployeeIndex} />
+                    <PrivateRoute path="/employees/" component={EmployeeIndex} />
                     <PrivateRoute path="/dashboard" component={Dashboard} />
                     <PrivateRoute path="/" component={Dashboard} />
                 </Switch>

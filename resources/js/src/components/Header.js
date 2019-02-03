@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import api from "../gateway/api";
 import { Button } from 'reactstrap';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 export default class Header extends Component {
 
@@ -30,10 +31,10 @@ export default class Header extends Component {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mr-auto">
                             <li className="nav-item active">
-                                <a className="nav-link" href="#">Dashboard <span className="sr-only">(current)</span></a>
+                                <Link className="nav-link" to="/dashboard">Dashboard</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Employees</a>
+                                <Link className="nav-link" to="/employees">Employees</Link>
                             </li>
                             {/* <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

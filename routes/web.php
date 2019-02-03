@@ -16,3 +16,4 @@
 //});
 
 Route::view('/{path?}', 'welcome');
+Route::view('/{path}/{path1}', 'welcome');

@@ -8,7 +8,7 @@ export default class Layout extends Component {
         return (
             <div>
                 <Header />
-                <p>{this.props.title}</p>
+                <p className="page-title">/{this.props.title}</p>
                 {this.props.children}
                 <ToastContainer />
             </div>
