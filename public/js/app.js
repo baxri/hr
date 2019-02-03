@@ -64913,7 +64913,7 @@ var warning = __webpack_require__(/*! fbjs/lib/warning */ "./node_modules/fbjs/l
 
 var ReactComponentTreeHook;
 
-if (typeof process !== 'undefined' && Object({"MIX_PUSHER_APP_CLUSTER":"mt1","MIX_PUSHER_APP_KEY":"","NODE_ENV":"development"}) && "development" === 'test') {
+if (typeof process !== 'undefined' && Object({"MIX_PUSHER_APP_KEY":"","MIX_PUSHER_APP_CLUSTER":"mt1","NODE_ENV":"development"}) && "development" === 'test') {
   // Temporary hack.
   // Inline requires don't work well with Jest:
   // https://github.com/facebook/react/issues/7240
@@ -65815,7 +65815,7 @@ var css = (function (styles) {
 // 
 
 
-var SC_ATTR = typeof process !== 'undefined' && Object({"MIX_PUSHER_APP_CLUSTER":"mt1","MIX_PUSHER_APP_KEY":"","NODE_ENV":"development"}).SC_ATTR || 'data-styled-components';
+var SC_ATTR = typeof process !== 'undefined' && Object({"MIX_PUSHER_APP_KEY":"","MIX_PUSHER_APP_CLUSTER":"mt1","NODE_ENV":"development"}).SC_ATTR || 'data-styled-components';
 var SC_STREAM_ATTR = 'data-styled-streamed';
 var CONTEXT_KEY = '__styled-components-stylesheet__';
 
@@ -70894,7 +70894,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // eslint-disable-line import/no-extraneous-dependencies
 
 
-if (!Object({"MIX_PUSHER_APP_CLUSTER":"mt1","MIX_PUSHER_APP_KEY":"","NODE_ENV":"development"}).REACT_SPINKIT_NO_STYLES) {
+if (!Object({"MIX_PUSHER_APP_KEY":"","MIX_PUSHER_APP_CLUSTER":"mt1","NODE_ENV":"development"}).REACT_SPINKIT_NO_STYLES) {
   /* eslint-disable global-require */
   __webpack_require__(/*! loaders.css */ "./node_modules/loaders.css/loaders.css");
   __webpack_require__(/*! ../css/base.css */ "./node_modules/react-spinkit/css/base.css");
@@ -86024,7 +86024,7 @@ function isStyledComponent(target) {
 
 // 
 
-var SC_ATTR = typeof process !== 'undefined' && Object({"MIX_PUSHER_APP_CLUSTER":"mt1","MIX_PUSHER_APP_KEY":"","NODE_ENV":"development"}).SC_ATTR || 'data-styled';
+var SC_ATTR = typeof process !== 'undefined' && Object({"MIX_PUSHER_APP_KEY":"","MIX_PUSHER_APP_CLUSTER":"mt1","NODE_ENV":"development"}).SC_ATTR || 'data-styled';
 
 var SC_VERSION_ATTR = 'data-styled-version';
 
@@ -90530,7 +90530,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
- // import './App.css';
+
 
 var App =
 /*#__PURE__*/
@@ -90744,7 +90744,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Login; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
 /* harmony import */ var _styled_Components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styled/Components */ "./resources/js/components/styled/Components.js");
 /* harmony import */ var react_toastify__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-toastify */ "./node_modules/react-toastify/lib/index.js");
 /* harmony import */ var react_toastify__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_toastify__WEBPACK_IMPORTED_MODULE_3__);
@@ -90801,14 +90801,14 @@ function (_Component) {
         className: "row justify-content-center"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-md-6 mt-5"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Form"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["FormGroup"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Label"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Form"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["FormGroup"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Label"], {
         for: "exampleEmail"
       }, "Email"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styled_Components__WEBPACK_IMPORTED_MODULE_2__["CustomInput"], {
         type: "email",
         name: "email",
         id: "exampleEmail",
         placeholder: "with a placeholder"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["FormGroup"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Label"], {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["FormGroup"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Label"], {
         for: "examplePassword"
       }, "Password"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styled_Components__WEBPACK_IMPORTED_MODULE_2__["CustomInput"], {
         type: "password",
@@ -91106,7 +91106,7 @@ function (_Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CustomButtom", function() { return CustomButtom; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CustomInput", function() { return CustomInput; });
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 function _templateObject2() {
   var data = _taggedTemplateLiteral(["\n    border-radius: unset;\n"]);
@@ -91132,8 +91132,8 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-var CustomButtom = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Button"])(_templateObject());
-var CustomInput = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Input"])(_templateObject2());
+var CustomButtom = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(reactstrap__WEBPACK_IMPORTED_MODULE_0__["Button"])(_templateObject());
+var CustomInput = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(reactstrap__WEBPACK_IMPORTED_MODULE_0__["Input"])(_templateObject2());
 
 /***/ }),
 
@@ -91155,8 +91155,8 @@ var CustomInput = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\xampp7\htdocs\hr\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\xampp7\htdocs\hr\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/mac/Documents/php/hr/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/mac/Documents/php/hr/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

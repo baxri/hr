@@ -8,9 +8,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 
-// import './App.css';
-
-
 class App extends Component {
     render() {
         return (
