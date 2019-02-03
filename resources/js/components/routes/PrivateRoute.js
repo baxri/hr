@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Link, Switch, Redirect } from "react-router-dom";
-// import logo from './logo.svg';
 import LoadingScreen from 'react-loading-screen';
-import Mmc from '../gateway/Mmc'
+import api from '../gateway/api'
 
 export default class PrivateRoute extends Component {
 
@@ -19,10 +18,11 @@ export default class PrivateRoute extends Component {
     async componentWillMount(){
 
         try {
-            let user = await Mmc.user();
+            let auth = await api.checkUserAuth();
+
             this.setState({
                 loading: false,
-                auth: true
+                auth: auth
             });
 
         } catch (error) {

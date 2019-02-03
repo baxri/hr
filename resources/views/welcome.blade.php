@@ -4,12 +4,13 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>UP</title>
+    <title>HR MANAGER</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
+    <link href="/css/app.css?v=2" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div id="app"></div>
-<script src="{{ asset('js/app.js') }}"></script>
+<script src="js/app.js?v=3"></script>
 </body>
 </html>
