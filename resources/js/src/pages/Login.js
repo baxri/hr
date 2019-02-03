@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-import { Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Form, FormGroup, Label, Input, FormText, Button } from 'reactstrap';
 import { CustomButtom, CustomInput } from '../styled/Components';
-import { ToastContainer, toast } from 'react-toastify';
 import api from "../gateway/api";
-
+import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -13,6 +12,7 @@ export default class Login extends Component {
     super(props)
 
     this.state = {
+      loading: false,
       client_id: '1',
       grant_type: 'password',
       username: 'hr@hr.com',
@@ -21,16 +21,20 @@ export default class Login extends Component {
     }
   }
 
-
   async login(event) {
     event.preventDefault();
+    this.setState({ loading: true });
 
-    try{
-      console.log('rato ar shedid to')
-      await api.login(this.state);
-      toast.success("Toast Successfully!");
-    }catch(err){
+    try {
+
+      let result = await api.post('/oauth/token', this.state);
+      localStorage.setItem('access_token', result.access_token);
+      window.location.href = "/"
+
+    } catch (err) {
       toast.error(err.message);
+    } finally {
+      this.setState({ loading: false });
     }
   }
 
@@ -48,17 +52,17 @@ export default class Login extends Component {
         </div>
         <div className="row justify-content-center">
           <div className="col-md-6 mt-5">
-            <Form>
+            <form onSubmit={this.login.bind(this)}>
               <FormGroup>
                 <Label for="exampleEmail">Email</Label>
-                <CustomInput type="email" name="username" onChange={this.handleChange.bind(this)} value={this.state.username} id="exampleEmail" placeholder="with a placeholder" />
+                <Input type="email" name="username" onChange={this.handleChange.bind(this)} value={this.state.username} id="exampleEmail" placeholder="with a placeholder" />
               </FormGroup>
               <FormGroup>
                 <Label for="examplePassword">Password</Label>
-                <CustomInput type="password" name="password" onChange={this.handleChange.bind(this)} value={this.state.password} id="examplePassword" placeholder="password placeholder" />
+                <Input type="password" name="password" onChange={this.handleChange.bind(this)} value={this.state.password} id="examplePassword" placeholder="password placeholder" />
               </FormGroup>
-              <CustomButtom onClick={this.login.bind(this)} color="danger col-12">Login</CustomButtom>
-            </Form>
+              <Button type="submit" onClick={this.login.bind(this)} color="danger col-12">{this.state.loading ? "Authorizing..." : "Login"}</Button>
+            </form>
           </div>
         </div>
         <ToastContainer />
