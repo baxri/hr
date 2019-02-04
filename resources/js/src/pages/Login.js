@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Form, FormGroup, Label, Input, FormText, Button } from 'reactstrap';
-import { CustomButtom, CustomInput } from '../styled/Components';
 import api from "../gateway/api";
 import { ToastContainer, toast } from 'react-toastify';
 

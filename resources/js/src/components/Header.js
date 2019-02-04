@@ -33,20 +33,20 @@ export default class Header extends Component {
                             <li className="nav-item active">
                                 <Link className="nav-link" to="/dashboard">Dashboard</Link>
                             </li>
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <Link className="nav-link" to="/employees">Employees</Link>
-                            </li>
-                            {/* <li className="nav-item dropdown">
+                            </li> */}
+                            <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Dropdown
+                                    Employees/Stores
         </a>
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a className="dropdown-item" href="#">Action</a>
-                                    <a className="dropdown-item" href="#">Another action</a>
+                                    <Link className="nav-link" to="/employees">Employees</Link>
+                                    <Link className="nav-link" to="/stores">Stores</Link>
                                     <div className="dropdown-divider"></div>
-                                    <a className="dropdown-item" href="#">Something else here</a>
+                                    <Link className="nav-link" to="/dashboard">Dashboard</Link>
                                 </div>
-                            </li> */}
+                            </li>
 
                         </ul>
                         <form className="form-inline my-2 my-lg-0" onSubmit={this.logout.bind(this)}>

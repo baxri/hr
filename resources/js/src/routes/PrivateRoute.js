@@ -20,8 +20,6 @@ export default class PrivateRoute extends Component {
         try {
             let auth = await api.checkUserAuth();
 
-            console.log(auth)
-
             this.setState({
                 loading: false,
                 auth: auth

@@ -8,6 +8,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import EmployeeIndex from './pages/employee/index';
+import StoresIndex from './pages/stores/index';
 
 class App extends Component {
     render() {
@@ -16,6 +17,7 @@ class App extends Component {
                 <Switch>
                     <PublicRoute exact path="/login" component={Login} />
                     <PrivateRoute path="/employees/" component={EmployeeIndex} />
+                    <PrivateRoute path="/stores/" component={StoresIndex} />
                     <PrivateRoute path="/dashboard" component={Dashboard} />
                     <PrivateRoute path="/" component={Dashboard} />
                 </Switch>

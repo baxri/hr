@@ -9,8 +9,23 @@ class api {
 
     async post(path, data, message = '') {
 
+        let access_token = localStorage.getItem('access_token');
+
         try {
-            const res = await axios.post(`${path}`, data);
+            const res = await axios.post(`${path}`, data, { 'headers': { 'Authorization': `Bearer ${access_token}` } });
+            this.action(message);
+            return res.data;
+        } catch (err) {
+            throw new Error(err.message);
+        }
+    }
+
+    async get(path, message = '') {
+
+        let access_token = localStorage.getItem('access_token');
+
+        try {
+            const res = await axios.get(`${path}`, { 'headers': { 'Authorization': `Bearer ${access_token}` } });
             this.action(message);
             return res.data;
         } catch (err) {

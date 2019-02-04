@@ -8,10 +8,10 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link href="/css/app.css?v=2" rel="stylesheet" type="text/css">
+    <link href="/css/app.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div id="app"></div>
-<script src="/js/app.js?v=3"></script>
+<script src="/js/app.js?v=<?php echo time(); ?>"></script>
 </body>
 </html>
