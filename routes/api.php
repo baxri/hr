@@ -10,6 +10,9 @@ Route::group(['middleware' => ['auth:api']], function () {
     // Employees
     Route::get('/employees', 'EmployeeController@index');
     Route::get('/employees/schema', 'EmployeeController@schema');
+    Route::get('/employees/{employee}', 'EmployeeController@show');
+    Route::post('/employees', 'EmployeeController@create');
+    Route::post('/employees/delete/{employee}', 'EmployeeController@delete');
 
     // Stores
     Route::get('/stores', 'StoreController@index');

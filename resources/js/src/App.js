@@ -7,7 +7,8 @@ import { ToastContainer, toast } from 'react-toastify';
 
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
-import EmployeeIndex from './pages/employee/index';
+
+import EmployeeIndex from './pages/employees/index';
 import StoresIndex from './pages/stores/index';
 
 class App extends Component {
