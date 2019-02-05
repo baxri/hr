@@ -92101,24 +92101,30 @@ var Index =
 function (_Component) {
   _inherits(Index, _Component);
 
-  function Index() {
+  function Index(props) {
+    var _this;
+
     _classCallCheck(this, Index);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Index).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Index).call(this, props));
+    _this.state = {
+      entity: 'stores'
+    };
+    return _this;
   }
 
   _createClass(Index, [{
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_layouts_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        title: "Stores"
+        title: this.state.entity
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container-fluid"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
-        path: "/stores/edit/:id",
+        path: "/".concat(this.state.entity, "/edit/:id"),
         component: _form__WEBPACK_IMPORTED_MODULE_4__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
-        path: "/stores/create",
+        path: "/".concat(this.state.entity, "/create"),
         component: _form__WEBPACK_IMPORTED_MODULE_4__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
         path: "/",
@@ -92198,6 +92204,7 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(List).call(this, props));
     _this.state = {
+      entity: 'stores',
       data: []
     };
     return _this;
@@ -92220,7 +92227,7 @@ function (_Component) {
               case 0:
                 _context.t0 = this;
                 _context.next = 3;
-                return _gateway_api__WEBPACK_IMPORTED_MODULE_4__["default"].get('/api/stores');
+                return _gateway_api__WEBPACK_IMPORTED_MODULE_4__["default"].get("/api/".concat(this.state.entity));
 
               case 3:
                 _context.t1 = _context.sent;
@@ -92256,14 +92263,14 @@ function (_Component) {
               case 0:
                 _context2.prev = 0;
                 _context2.next = 3;
-                return _gateway_api__WEBPACK_IMPORTED_MODULE_4__["default"].post('/api/stores/delete/' + id, {});
+                return _gateway_api__WEBPACK_IMPORTED_MODULE_4__["default"].post("/api/".concat(this.state.entity, "/delete/").concat(id), {});
 
               case 3:
                 _context2.next = 5;
                 return this.loadEmployees();
 
               case 5:
-                react_toastify__WEBPACK_IMPORTED_MODULE_5__["toast"].success("Store Successfully Deleted");
+                react_toastify__WEBPACK_IMPORTED_MODULE_5__["toast"].success("".concat(this.state.entity, " Successfully Deleted"));
                 _context2.next = 11;
                 break;
 
@@ -92294,7 +92301,7 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_table__WEBPACK_IMPORTED_MODULE_3__["default"], {
         data: this.state.data,
         columns: [{
-          Header: "Stores List",
+          Header: "".concat(this.state.entity, " list"),
           columns: [{
             Header: "Name",
             accessor: "name"
@@ -92321,7 +92328,7 @@ function (_Component) {
                 },
                 className: "btn btn-sm btn-danger"
               }, "Delete"), "\xA0", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-                to: "stores/edit/".concat(row.value),
+                to: "".concat(_this2.state.entity, "/edit/").concat(row.value),
                 className: "btn btn-sm btn-info"
               }, "Edit"));
             }
@@ -92330,7 +92337,7 @@ function (_Component) {
         defaultPageSize: 20,
         className: "-striped -highlight"
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        to: "/stores/create",
+        to: "/".concat(this.state.entity, "/create"),
         className: "btn btn-danger create-new"
       }, "+"));
     }

@@ -12,6 +12,7 @@ export default class List extends Component {
         super(props)
 
         this.state = {
+            entity: 'stores',
             data: [],
         }
     }
@@ -21,14 +22,14 @@ export default class List extends Component {
     }
 
     async loadEmployees() {
-        this.setState({ data: await api.get('/api/stores') });
+        this.setState({ data: await api.get(`/api/${this.state.entity}`) });
     }
 
     async delete(id) {
         try {
-            await api.post('/api/stores/delete/' + id, {});
+            await api.post(`/api/${this.state.entity}/delete/${id}`, {});
             await this.loadEmployees();
-            toast.success("Store Successfully Deleted");
+            toast.success(`${this.state.entity} Successfully Deleted`);
         } catch (err) {
             toast.error(err.message);
         }
@@ -42,7 +43,7 @@ export default class List extends Component {
                     data={this.state.data}
                     columns={[
                         {
-                            Header: "Stores List",
+                            Header: `${this.state.entity} list`,
                             columns: [
                                 {
                                     Header: "Name",
@@ -71,7 +72,7 @@ export default class List extends Component {
                                         return (<div>
                                             <Link to="#" onClick={() => this.delete(row.value)} className="btn btn-sm btn-danger">Delete</Link>
                                             &nbsp;
-                                        <Link to={`stores/edit/${row.value}`} className="btn btn-sm btn-info">Edit</Link>
+                                        <Link to={`${this.state.entity}/edit/${row.value}`} className="btn btn-sm btn-info">Edit</Link>
                                         </div>)
                                     }
                                 },
@@ -83,7 +84,7 @@ export default class List extends Component {
                 />
 
 
-                <Link to="/stores/create" className="btn btn-danger create-new">+</Link>
+                <Link to={`/${this.state.entity}/create`} className="btn btn-danger create-new">+</Link>
             </div>
         )
     }
