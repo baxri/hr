@@ -90900,11 +90900,11 @@ function (_Component) {
         "aria-labelledby": "navbarDropdown"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         className: "nav-link",
-        to: "/employees"
-      }, "Employees"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
-        className: "nav-link",
         to: "/stores"
-      }, "Stores"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Stores"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        className: "nav-link",
+        to: "/employees"
+      }, "Employees"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "dropdown-divider"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         className: "nav-link",

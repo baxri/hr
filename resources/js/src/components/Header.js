@@ -41,8 +41,8 @@ export default class Header extends Component {
                                     Employees/Stores
         </a>
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <Link className="nav-link" to="/employees">Employees</Link>
                                     <Link className="nav-link" to="/stores">Stores</Link>
+                                    <Link className="nav-link" to="/employees">Employees</Link>
                                     <div className="dropdown-divider"></div>
                                     <Link className="nav-link" to="/dashboard">Dashboard</Link>
                                 </div>
