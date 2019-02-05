@@ -18,8 +18,8 @@ class StoreController extends Controller
     {
         $columns = Schema::getColumnListing('stores');
 
-        unset($columns[0]);
-        $columns = array_values($columns);
+//        unset($columns[0]);
+//        $columns = array_values($columns);
 
         // Remove timestamps
         unset($columns[count($columns) - 1]);
@@ -33,7 +33,15 @@ class StoreController extends Controller
 
     public function create(Request $request)
     {
-        $result = Store::create($request->all());
+        $id = $request->input('id');
+
+        if (!empty($id)) {
+            $result = Store::find($id);
+            $result->update($request->all());
+        } else {
+            $result = Store::create($request->all());
+        }
+
         return response()->json($result->toArray());
     }
 

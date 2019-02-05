@@ -69691,6 +69691,68 @@ var generatePath = function generatePath() {
 
 /***/ }),
 
+/***/ "./node_modules/react-router/es/index.js":
+/*!***********************************************!*\
+  !*** ./node_modules/react-router/es/index.js ***!
+  \***********************************************/
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _MemoryRouter__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MemoryRouter */ "./node_modules/react-router/es/MemoryRouter.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MemoryRouter", function() { return _MemoryRouter__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+/* harmony import */ var _Prompt__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Prompt */ "./node_modules/react-router/es/Prompt.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Prompt", function() { return _Prompt__WEBPACK_IMPORTED_MODULE_1__["default"]; });
+
+/* harmony import */ var _Redirect__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Redirect */ "./node_modules/react-router/es/Redirect.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Redirect", function() { return _Redirect__WEBPACK_IMPORTED_MODULE_2__["default"]; });
+
+/* harmony import */ var _Route__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Route */ "./node_modules/react-router/es/Route.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Route", function() { return _Route__WEBPACK_IMPORTED_MODULE_3__["default"]; });
+
+/* harmony import */ var _Router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Router */ "./node_modules/react-router/es/Router.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Router", function() { return _Router__WEBPACK_IMPORTED_MODULE_4__["default"]; });
+
+/* harmony import */ var _StaticRouter__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./StaticRouter */ "./node_modules/react-router/es/StaticRouter.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "StaticRouter", function() { return _StaticRouter__WEBPACK_IMPORTED_MODULE_5__["default"]; });
+
+/* harmony import */ var _Switch__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Switch */ "./node_modules/react-router/es/Switch.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Switch", function() { return _Switch__WEBPACK_IMPORTED_MODULE_6__["default"]; });
+
+/* harmony import */ var _generatePath__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./generatePath */ "./node_modules/react-router/es/generatePath.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "generatePath", function() { return _generatePath__WEBPACK_IMPORTED_MODULE_7__["default"]; });
+
+/* harmony import */ var _matchPath__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./matchPath */ "./node_modules/react-router/es/matchPath.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "matchPath", function() { return _matchPath__WEBPACK_IMPORTED_MODULE_8__["default"]; });
+
+/* harmony import */ var _withRouter__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./withRouter */ "./node_modules/react-router/es/withRouter.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "withRouter", function() { return _withRouter__WEBPACK_IMPORTED_MODULE_9__["default"]; });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***/ }),
+
 /***/ "./node_modules/react-router/es/matchPath.js":
 /*!***************************************************!*\
   !*** ./node_modules/react-router/es/matchPath.js ***!
@@ -91764,24 +91826,25 @@ function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/src/pages/stores/create.js":
-/*!*************************************************!*\
-  !*** ./resources/js/src/pages/stores/create.js ***!
-  \*************************************************/
+/***/ "./resources/js/src/pages/stores/form.js":
+/*!***********************************************!*\
+  !*** ./resources/js/src/pages/stores/form.js ***!
+  \***********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Create; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Form; });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _gateway_api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../gateway/api */ "./resources/js/src/gateway/api.js");
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
-/* harmony import */ var react_toastify__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-toastify */ "./node_modules/react-toastify/lib/index.js");
-/* harmony import */ var react_toastify__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_toastify__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var react_toastify__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-toastify */ "./node_modules/react-toastify/lib/index.js");
+/* harmony import */ var react_toastify__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_toastify__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/es/index.js");
+/* harmony import */ var _gateway_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../gateway/api */ "./resources/js/src/gateway/api.js");
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -91811,53 +91874,74 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-var Create =
+
+var Form =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(Create, _Component);
+  _inherits(Form, _Component);
 
-  function Create(props) {
+  function Form(props) {
     var _this;
 
-    _classCallCheck(this, Create);
+    _classCallCheck(this, Form);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Create).call(this, props));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Form).call(this, props));
     _this.state = {
       loading: false,
+      redirect: null,
+      entity: 'stores',
       schema: [],
       formData: {}
     };
     return _this;
   }
 
-  _createClass(Create, [{
+  _createClass(Form, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.loadSchema();
+      this.loadData();
     }
   }, {
-    key: "loadSchema",
+    key: "loadData",
     value: function () {
-      var _loadSchema = _asyncToGenerator(
+      var _loadData = _asyncToGenerator(
       /*#__PURE__*/
       _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                _context.t0 = this;
-                _context.next = 3;
-                return _gateway_api__WEBPACK_IMPORTED_MODULE_2__["default"].get('/api/stores/schema');
+                if (!this.props.match.params.id) {
+                  _context.next = 7;
+                  break;
+                }
 
-              case 3:
+                _context.t0 = this;
+                _context.next = 4;
+                return _gateway_api__WEBPACK_IMPORTED_MODULE_5__["default"].get("/api/".concat(this.state.entity, "/").concat(this.props.match.params.id));
+
+              case 4:
                 _context.t1 = _context.sent;
                 _context.t2 = {
-                  schema: _context.t1
+                  formData: _context.t1
                 };
 
                 _context.t0.setState.call(_context.t0, _context.t2);
 
-              case 6:
+              case 7:
+                _context.t3 = this;
+                _context.next = 10;
+                return _gateway_api__WEBPACK_IMPORTED_MODULE_5__["default"].get("/api/".concat(this.state.entity, "/schema"));
+
+              case 10:
+                _context.t4 = _context.sent;
+                _context.t5 = {
+                  schema: _context.t4
+                };
+
+                _context.t3.setState.call(_context.t3, _context.t5);
+
+              case 13:
               case "end":
                 return _context.stop();
             }
@@ -91865,11 +91949,11 @@ function (_Component) {
         }, _callee, this);
       }));
 
-      function loadSchema() {
-        return _loadSchema.apply(this, arguments);
+      function loadData() {
+        return _loadData.apply(this, arguments);
       }
 
-      return loadSchema;
+      return loadData;
     }()
   }, {
     key: "submit",
@@ -91887,31 +91971,34 @@ function (_Component) {
                 });
                 _context2.prev = 2;
                 _context2.next = 5;
-                return _gateway_api__WEBPACK_IMPORTED_MODULE_2__["default"].post('/api/stores', this.state.formData);
+                return _gateway_api__WEBPACK_IMPORTED_MODULE_5__["default"].post("/api/".concat(this.state.entity), this.state.formData);
 
               case 5:
-                window.location.href = "/stores";
-                _context2.next = 11;
+                react_toastify__WEBPACK_IMPORTED_MODULE_3__["toast"].success("".concat(this.state.entity, " Successfully Updated!"));
+                this.setState({
+                  redirect: this.state.entity
+                });
+                _context2.next = 12;
                 break;
 
-              case 8:
-                _context2.prev = 8;
+              case 9:
+                _context2.prev = 9;
                 _context2.t0 = _context2["catch"](2);
-                react_toastify__WEBPACK_IMPORTED_MODULE_4__["toast"].error(_context2.t0.message);
+                react_toastify__WEBPACK_IMPORTED_MODULE_3__["toast"].error(_context2.t0.message);
 
-              case 11:
-                _context2.prev = 11;
+              case 12:
+                _context2.prev = 12;
                 this.setState({
                   loading: false
                 });
-                return _context2.finish(11);
+                return _context2.finish(12);
 
-              case 14:
+              case 15:
               case "end":
                 return _context2.stop();
             }
           }
-        }, _callee2, this, [[2, 8, 11, 14]]);
+        }, _callee2, this, [[2, 9, 12, 15]]);
       }));
 
       function submit(_x) {
@@ -91934,29 +92021,35 @@ function (_Component) {
     value: function render() {
       var _this2 = this;
 
+      if (this.state.redirect != null) {
+        return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_4__["Redirect"], {
+          to: "/".concat(this.state.redirect)
+        });
+      }
+
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("form", {
         onSubmit: this.submit.bind(this)
       }, this.state.schema.map(function (field) {
         return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
           key: field
-        }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_3__["FormGroup"], null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_3__["Label"], {
+        }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__["FormGroup"], null, field != 'id' && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Label"], {
           for: field
-        }, field), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_3__["Input"], {
-          type: "text",
+        }, field), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Input"], {
+          type: field == 'id' ? 'hidden' : 'text',
           name: field,
           id: field,
           onChange: _this2.handleChange.bind(_this2),
           value: _this2.state.formData[field] ? _this2.state.formData[field] : ''
         })));
-      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_3__["Button"], {
+      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Button"], {
         type: "submit",
         onClick: this.submit.bind(this),
         color: "danger col-12"
-      }, this.state.loading ? "Submiting..." : "Submit")));
+      }, this.state.loading ? "Submiting..." : "Submit"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null)));
     }
   }]);
 
-  return Create;
+  return Form;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
 
@@ -91978,7 +92071,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _layouts_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../layouts/Layout */ "./resources/js/src/layouts/Layout.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
 /* harmony import */ var _list__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./list */ "./resources/js/src/pages/stores/list.js");
-/* harmony import */ var _create__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./create */ "./resources/js/src/pages/stores/create.js");
+/* harmony import */ var _form__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./form */ "./resources/js/src/pages/stores/form.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -92022,8 +92115,11 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container-fluid"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+        path: "/stores/edit/:id",
+        component: _form__WEBPACK_IMPORTED_MODULE_4__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
         path: "/stores/create",
-        component: _create__WEBPACK_IMPORTED_MODULE_4__["default"]
+        component: _form__WEBPACK_IMPORTED_MODULE_4__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
         path: "/",
         component: _list__WEBPACK_IMPORTED_MODULE_3__["default"]

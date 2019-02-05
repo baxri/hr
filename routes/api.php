@@ -14,7 +14,10 @@ Route::group(['middleware' => ['auth:api']], function () {
     // Stores
     Route::get('/stores', 'StoreController@index');
     Route::get('/stores/schema', 'StoreController@schema');
+    Route::get('/stores/{store}', 'StoreController@show');
     Route::post('/stores', 'StoreController@create');
     Route::post('/stores/delete/{store}', 'StoreController@delete');
-//    Route::get('/stores/{store}', 'StoreController@schema');
+
+
+
 });
