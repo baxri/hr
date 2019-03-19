@@ -20,7 +20,4 @@ Route::group(['middleware' => ['auth:api']], function () {
     Route::get('/stores/{store}', 'StoreController@show');
     Route::post('/stores', 'StoreController@create');
     Route::post('/stores/delete/{store}', 'StoreController@delete');
-
-
-
 });
